@@ -41,7 +41,6 @@ static NSString *const kCellIdentifier = @"Cell";
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [tableView fd_heightForCellWithIdentifier:kCellIdentifier configuration:^(TableViewCell *cell){
         [cell updateHeightUsingText:self.dataSource[indexPath.row]];
-        [cell setNeedsLayout];
     }];
 }
 
